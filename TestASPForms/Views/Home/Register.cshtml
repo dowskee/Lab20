@@ -4,4 +4,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Hell, @ViewBag.UName. Your information has been saved! Thank you for signing up for Super Awesome Coffee Rewards!</h2>
+<h2>Register</h2>
+@model TestASPForms.Models.UserInfo
+<form action="/Home/SaveUserInfo" method="post">
+    First Name: <input type="text" name="FirstName" /><br />
+    Last Name: <input type="text" name="LastName" /><br />
+    Email: <input type="email" name="Email" /><br />
+    Phone Number: <input type="text" name="PhoneNumber" /><br />
+    Phone Type: <select name="Phone Type">
+        <option value="Home">Home</option>
+        <option value="Cell">Cell</option>
+    </select><br />
+    Password: <input type="password" name="PassWord" /><br />
+    <input type="submit" value="Register" />
+</form>

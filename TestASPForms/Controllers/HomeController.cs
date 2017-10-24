@@ -32,8 +32,13 @@ namespace TestASPForms.Controllers
         {
             ViewBag.UName = U.FirstName;
             //to do: Save user info to DB!
-            return View("Register");
+            return View("Confirm");
 
+        }
+
+        public ActionResult Register()
+        {
+            return View("Register");
         }
     }
 }
