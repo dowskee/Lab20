@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+@model TestASPForms.Models.UserInfo
+<form action="/Home/SaveUserInfo" method="post">
+    First Name: <input type="text" name="FirstName"/><br />
+    Last Name: <input type="text" name="LastName"/><br />
+    Email: <input type="email" name="Email"/><br />
+    Phone Number: <input type="text" name="PhoneNumber" /><br />
+    Phone Type: <select name="Phone Type">
+    <option value="Home">Home</option>
+    <option value="Cell">Cell</option>
+    </select><br />
+    Password: <input type="password" name="PassWord" /><br />
+    <input type="submit" value="Register" />
+</form>
